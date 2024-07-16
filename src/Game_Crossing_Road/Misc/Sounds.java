@@ -12,7 +12,7 @@ public abstract class Sounds {
     }
 
     public static void buttonPressed(){
-        loadSound("res/Sound/buttonPressed.wav" , 0);
+        loadSound("res/Sound/buttonPressed.wav");
     }
 
     public static void intro() {
@@ -30,11 +30,11 @@ public abstract class Sounds {
     }
 
     public static void gotHit(){
-        loadSound("res/Sound/gotHit.wav" , 0);
+        loadSound("res/Sound/gotHit.wav");
     }
 
     public static void jumping(){
-        loadSound("res/Sound/jumping.wav" , 0);
+        loadSound("res/Sound/jumping.wav");
     }
 
     public static void loadSound(String path, int start) {
@@ -50,6 +50,12 @@ public abstract class Sounds {
         }
     }
 
+    private static Clip loopSound(String path){
+        return loopSound(path,0);
+    }
+    private static void loadSound(String path){
+        loadSound(path , 0);
+    }
     private static Clip loopSound(String path, float volume) {
         try {
             File file = new File(path);

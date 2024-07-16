@@ -6,12 +6,10 @@ import java.awt.event.KeyListener;
 
 public class Controller implements KeyListener {
     private Character character;
-    private Scene scene;
     private boolean canJump = true;
 
-    public Controller(Character character, Scene scene) {
+    public Controller(Character character) {
         this.character = character;
-        this.scene = scene;
     }
 
     @Override
@@ -43,7 +41,6 @@ public class Controller implements KeyListener {
                 default:
                     System.out.println("Wrong button");
             }
-            this.scene.repaint();
         }
     }
 

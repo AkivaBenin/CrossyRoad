@@ -35,7 +35,7 @@ public class Scene extends JPanel implements Runnable {
         this.requestFocusInWindow();
         Sounds.inGameSound();
         startGame();
-        this.addKeyListener(new Controller(this.character, this));
+        this.addKeyListener(new Controller(this.character));
     }
 
     public void paintComponent(Graphics g) {
